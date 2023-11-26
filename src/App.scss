@@ -1,0 +1,91 @@
+@import "./vendors/variables";
+@import "./vendors/mixins";
+
+* {
+  box-sizing: border-box;
+  transition: all 500ms ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $main-font !important;
+}
+
+.page-container {
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media(max-width: 922px) {
+    padding: 0 20px;
+  }
+}
+
+h2 {
+  font-size: 42px !important;
+
+  @media(max-width: 922px) {
+    font-size: 30px !important;
+  }
+}
+
+h3 {
+  color: $main-color;
+}
+
+.general-button {
+  padding: 12px 40px;
+  color: $main-color;
+  background-color: transparent;
+  border: 2px solid $main-color;
+  font-size: 15px;
+  font-weight: 500;
+  width: fit-content;
+
+  &:hover {
+    background-color: $main-color;
+    color: white;
+  }
+}
+
+.clean-button {
+  @include cleanButton;
+}
+
+.divider-part {
+  margin: 20px 0 60px 0;
+
+  .divider {
+    width: 5%;
+    height: 2px;
+    background-color: $main-color;
+    margin: 0 auto;
+    border-radius: 3%;
+  }
+}
+
+.part-title {
+  font-size: 30px;
+  line-height: 1.2em;
+  font-weight: 400;
+
+  @media(max-width: 922px) {
+    font-size: 22px;
+  }
+}
+
+::-webkit-scrollbar {
+  padding-left: 5px;
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+}
